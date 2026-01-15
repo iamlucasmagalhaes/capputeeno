@@ -1,3 +1,4 @@
+import { Header } from "@/components/header";
 import type { Metadata } from "next";
 import { Saira } from "next/font/google";
 import "./globals.css";
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={saira.variable}>
+        <Header/>
         {children}
       </body>
     </html>
