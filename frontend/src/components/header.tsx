@@ -3,6 +3,7 @@
 import styled from "styled-components"
 import { Saira_Stencil_One } from "next/font/google";
 import { PrimaryInputWSearchIcon } from "./primary-input";
+import { CartControl } from "./cart-control";
 
 const sairaStencil = Saira_Stencil_One({
   variable: "--font-saira",
@@ -19,6 +20,13 @@ const TagHeader = styled.header`
     align-items: center;
     justify-content: space-between;
     padding: 20px 160px;
+
+    > div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+    }
 `
 
 const Logo = styled.a`
@@ -34,6 +42,7 @@ export function Header(props: HeaderProps){
             <Logo className={sairaStencil.className}>Capputeeno</Logo>
             <div>
                 <PrimaryInputWSearchIcon placeholder="Procurando por algo específico?"/>
+                <CartControl/>             
             </div>
         </TagHeader>
     )
